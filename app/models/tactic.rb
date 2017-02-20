@@ -5,5 +5,4 @@ class Tactic
     @id = id
     @name = name
   end
-
 end
