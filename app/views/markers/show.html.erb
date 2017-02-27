@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Marker name:</strong>
+  <%= @marker.marker_name %>
+</p>
+
+<p>
+  <strong>Color:</strong>
+  <%= @marker.color %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @marker.type %>
+</p>
+
+<%= link_to 'Edit', edit_marker_path(@marker) %> |
+<%= link_to 'Back', markers_path %>
