@@ -1,3 +1,3 @@
 class Marker < ApplicationRecord
-	Has_many: Position
+	Has_many :Position
 end
