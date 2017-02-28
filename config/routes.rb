@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :positions
   resources :markers
   resources :tactics
   resources :sequences
