@@ -12,12 +12,6 @@
 
   <tbody>
 
-    # app/views/sequences/index.html.erb
-    <%= form_tag "/sequences", method: "post" do %>
-    <input type="button" value="Ajouter une séquence" />
-    <% end %>
-
-
     <% @sequences.each do |sequence| %>
     <tr>
       <td><%= sequence.id %></td>

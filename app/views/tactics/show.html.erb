@@ -2,15 +2,21 @@
 
 
 <p>
-  <strong>Name:</strong>
-  <%= @tactic.name %>
+	<strong>Name:</strong>
+	<%= @tactic.name %>
 
 </p>
 
+
+<%= form_tag "/sequences", method: "post" do %>
+<input type="button" value="Ajouter une séquence" />
+<% end %>
+
+
 <p>
-  <strong>Séquence:</strong>
-  <%= @tactic.sequences.first.id%>
-  <%= @tactic.sequences.first.name%>
+	<strong>Séquence:</strong>
+	<%= @tactic.sequences.first.id%>
+	<%= @tactic.sequences.first.name%>
 
 </p>
 
