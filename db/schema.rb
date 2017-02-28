@@ -13,11 +13,11 @@
 ActiveRecord::Schema.define(version: 20170228093005) do
 
   create_table "markers", force: :cascade do |t|
-    t.string   "marker_name"
+    t.string   "name"
     t.string   "color"
     t.string   "type"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "positions", force: :cascade do |t|
@@ -31,11 +31,11 @@ ActiveRecord::Schema.define(version: 20170228093005) do
   end
 
   create_table "sequences", force: :cascade do |t|
-    t.integer  "Tactic_id"
+    t.integer  "tactic_id"
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["Tactic_id"], name: "index_sequences_on_Tactic_id"
+    t.index ["tactic_id"], name: "index_sequences_on_tactic_id"
   end
 
   create_table "tactics", force: :cascade do |t|

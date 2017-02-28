@@ -25,15 +25,11 @@ class TacticsController < ApplicationController
   # POST /tactics.json
   def create
     @tactic = Tactic.new(tactic_params)
-
-    respond_to do |format|
-      if @tactic.save
-        format.html { redirect_to @tactic, notice: 'Tactic was successfully created.' }
-        format.json { render :show, status: :created, location: @tactic }
-      else
-        format.html { render :new }
-        format.json { render json: @tactic.errors, status: :unprocessable_entity }
-      end
+    if @tactic.save
+      @tactic.sequences.create name: "Séquence 01"
+      redirect_to @tactic, notice: 'Tactic was successfully created.'
+    else
+      render :new
     end
   end
 

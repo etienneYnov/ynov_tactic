@@ -1,3 +1,3 @@
 class Tactic < ApplicationRecord
-  has_many :Sequences
+  has_many :sequences
 end

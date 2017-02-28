@@ -4,7 +4,17 @@
 <p>
   <strong>Name:</strong>
   <%= @tactic.name %>
+
 </p>
+
+<p>
+  <strong>Séquence:</strong>
+  <%= @tactic.sequences.first.id%>
+  <%= @tactic.sequences.first.name%>
+
+</p>
+
+
 
 <%= image_tag 'terrain.jpg' %>
 

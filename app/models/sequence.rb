@@ -1,4 +1,4 @@
 class Sequence < ApplicationRecord
-  Belongs_to :Tactic
-  Has_many :Position
+  belongs_to :tactic
+  has_many :positions
 end
