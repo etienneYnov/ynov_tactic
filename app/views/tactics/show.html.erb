@@ -1,14 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Id:</strong>
-  <%= @tactic.id %>
-</p>
 
 <p>
   <strong>Name:</strong>
   <%= @tactic.name %>
 </p>
+
+<%= image_tag 'terrain.jpg' %>
+
 
 <%= link_to 'Edit', edit_tactic_path(@tactic) %> |
 <%= link_to 'Back', tactics_path %>

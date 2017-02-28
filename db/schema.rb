@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170227110127) do
+ActiveRecord::Schema.define(version: 20170228093005) do
 
   create_table "markers", force: :cascade do |t|
     t.string   "marker_name"
@@ -18,6 +18,16 @@ ActiveRecord::Schema.define(version: 20170227110127) do
     t.string   "type"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+  end
+
+  create_table "positions", force: :cascade do |t|
+    t.string   "name"
+    t.float    "x1"
+    t.float    "y1"
+    t.float    "x2"
+    t.float    "y2"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "sequences", force: :cascade do |t|
