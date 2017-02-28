@@ -1,7 +1,6 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Sequences</h1>
-
 <table>
   <thead>
     <tr>
@@ -12,14 +11,21 @@
   </thead>
 
   <tbody>
+
+    # app/views/sequences/index.html.erb
+    <%= form_tag "/sequences", method: "post" do %>
+    <input type="button" value="Ajouter une séquence" />
+    <% end %>
+
+
     <% @sequences.each do |sequence| %>
-      <tr>
-        <td><%= sequence.id %></td>
-        <td><%= sequence.name %></td>
-        <td><%= link_to 'Show', sequence %></td>
-        <td><%= link_to 'Edit', edit_sequence_path(sequence) %></td>
-        <td><%= link_to 'Destroy', sequence, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+    <tr>
+      <td><%= sequence.id %></td>
+      <td><%= sequence.name %></td>
+      <td><%= link_to 'Show', sequence %></td>
+      <td><%= link_to 'Edit', edit_sequence_path(sequence) %></td>
+      <td><%= link_to 'Destroy', sequence, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
     <% end %>
   </tbody>
 </table>
