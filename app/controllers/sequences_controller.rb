@@ -1,6 +1,5 @@
 class SequencesController < ApplicationController
   before_action :set_sequence, only: [:show, :edit, :update, :destroy]
-
   # GET /sequences
   # GET /sequences.json
   def index

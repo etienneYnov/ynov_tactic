@@ -13,6 +13,7 @@ class TacticsController < ApplicationController
   end
 
   # GET /tactics/new
+  
   def new
     @tactic = Tactic.new
   end
