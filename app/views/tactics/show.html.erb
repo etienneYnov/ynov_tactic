@@ -15,7 +15,7 @@
 
 
 <p>
-	<strong>Séquence:</strong>
+	<strong>Séquence:</strong><br>
   	<% @tactic.sequences.each do |sequence| %>
 		<tr>
  			<td><%= sequence.name %></td>
@@ -25,10 +25,10 @@
 </p>
 
 <p>
-	<strong>Markers:</strong>
+	<strong>Markers:</strong><br>
   	<% @tactic.sequences.first.markers.each do |marker| %>
 		<tr>
- 			<td><%= marker.name %></td>
+ 			<td><%= marker.name %></td><br>
 		</tr>
 	<% end %>
 
