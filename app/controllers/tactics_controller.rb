@@ -13,7 +13,7 @@ class TacticsController < ApplicationController
   end
 
   # GET /tactics/new
-  
+
   def new
     @tactic = Tactic.new
   end
@@ -27,7 +27,6 @@ class TacticsController < ApplicationController
   def create
     @tactic = Tactic.new(tactic_params)
     if @tactic.save
-      @tactic.sequences.create name: "Séquence 01"
       redirect_to @tactic, notice: 'Tactic was successfully created.'
     else
       render :new
