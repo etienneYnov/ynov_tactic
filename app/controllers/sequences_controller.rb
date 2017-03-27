@@ -25,13 +25,10 @@ class SequencesController < ApplicationController
   def create
     @sequence = Sequence.new(sequence_params)
 
-    respond_to do |format|
       if @sequence.save
-        format.html { redirect_to @sequence, notice: 'Sequence was successfully created.' }
-        format.json { render :show, status: :created, location: @sequence }
+        redirect_to @sequence, notice: 'Sequence was successfully created.' 
       else
-        format.html { render :new }
-        format.json { render json: @sequence.errors, status: :unprocessable_entity }
+        render :new 
       end
     end
   end
