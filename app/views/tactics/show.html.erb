@@ -16,8 +16,21 @@
 
 <p>
 	<strong>Séquence:</strong>
-	<%= @tactic.sequences.first.id%>
-	<%= @tactic.sequences.first.name%>
+  	<% @tactic.sequences.each do |sequence| %>
+		<tr>
+ 			<td><%= sequence.name %></td>
+		</tr>
+	<% end %>
+
+</p>
+
+<p>
+	<strong>Markers:</strong>
+  	<% @tactic.sequences.first.markers.each do |marker| %>
+		<tr>
+ 			<td><%= marker.name %></td>
+		</tr>
+	<% end %>
 
 </p>
 
