@@ -1,3 +1,7 @@
 class Marker < ApplicationRecord
-	has_many :position
+
+  belongs_to :sequence
+
+  validates :name, presence: true
+
 end

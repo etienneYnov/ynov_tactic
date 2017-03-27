@@ -10,24 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170228093005) do
+ActiveRecord::Schema.define(version: 20170327083556) do
 
   create_table "markers", force: :cascade do |t|
     t.string   "name"
     t.string   "color"
     t.string   "type"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "positions", force: :cascade do |t|
-    t.string   "name"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "sequence_id"
     t.float    "x1"
     t.float    "y1"
     t.float    "x2"
     t.float    "y2"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.index ["sequence_id"], name: "index_markers_on_sequence_id"
   end
 
   create_table "sequences", force: :cascade do |t|

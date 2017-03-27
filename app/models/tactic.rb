@@ -7,7 +7,7 @@ class Tactic < ApplicationRecord
   private
 
   def create_first_sequence
-    sequences.create name: "Séquence 01"
+    sequences.create! name: "Séquence 01"
   end
 
 end
