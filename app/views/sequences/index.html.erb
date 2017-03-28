@@ -16,9 +16,9 @@
     <tr>
       <td><%= sequence.id %></td>
       <td><%= sequence.name %></td>
-      <td><%= link_to 'Show', sequence %></td>
-      <td><%= link_to 'Edit', edit_sequence_path(sequence) %></td>
-      <td><%= link_to 'Destroy', sequence, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <td><%= link_to 'Show', tactic_sequence_path(@tactic, sequence) %></td>
+      <td><%= link_to 'Edit', edit_tactic_sequence_path( @tactic, sequence) %></td>
+      <td><%= link_to 'Destroy', tactic_sequences_path(@tactic), method: :delete, data: { confirm: 'Are you sure?' } %></td>
     </tr>
     <% end %>
   </tbody>
@@ -26,4 +26,4 @@
 
 <br>
 
-<%= link_to 'New Sequence', new_sequence_path %>
+<%= link_to 'New Sequence', new_tactic_sequence_path(@tactic)%>

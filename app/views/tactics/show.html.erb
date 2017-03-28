@@ -1,5 +1,9 @@
 <p id="notice"><%= notice %></p>
-
+<script type="text/javascript">
+$("#toto").click(function(){
+	alert('coucou');
+});
+</script>
 
 <p>
 	<strong>Name:</strong>
@@ -9,7 +13,8 @@
 
 <p>
 	<%= form_tag "/sequences", method: "post" do %>
-	<input type="button" value="Ajouter une séquence" />
+	<%= link_to 'New Sequence', new_tactic_sequence_path(@tactic) %>
+	<!--<input type="button" id="toto" value="Ajouter une séquence" />-->
 	<% end %>
 </p>
 

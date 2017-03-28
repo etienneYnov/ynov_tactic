@@ -3,7 +3,8 @@ class SequencesController < ApplicationController
   # GET /sequences
   # GET /sequences.json
   def index
-    @sequences = Sequence.all
+    @tactic = Tactic.find(params[:tactic_id])
+    @sequences = @tactic.sequences
   end
 
   # GET /sequences/1
@@ -11,25 +12,24 @@ class SequencesController < ApplicationController
   def show
   end
 
-  # GET /sequences/new
+  # GET /tactics/:tactic_id/sequences/new
   def new
     @sequence = Sequence.new
+    @tactic = Tactic.find(params[:tactic_id])
   end
 
   # GET /sequences/1/edit
   def edit
   end
 
-  # POST /sequences
-  # POST /sequences.json
+  # POST /tactics/:tactic_id/sequences
   def create
-    @sequence = Sequence.new(sequence_params)
-
-      if @sequence.save
-        redirect_to @sequence, notice: 'Sequence was successfully created.' 
-      else
-        render :new 
-      end
+    @tactic = Tactic.find(params[:tactic_id])
+    @sequence = @tactic.sequences.build(sequence_params)
+    if @sequence.save
+      redirect_to tactic_path(@tactic), notice: 'Sequence was successfully created.' 
+    else
+      render :new 
     end
   end
 
